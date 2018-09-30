@@ -1,6 +1,5 @@
 package com.zzeng.nestedrecyclerview;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -54,11 +53,8 @@ public class MainActivity extends AppCompatActivity {
         mNestedAdapter.setOnItemClickListener(new NestedAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                if (((Content) mDataList.get(position)).getClass() != null) {
-                    startActivity(new Intent(MainActivity.this, ((Content) mDataList.get(position)).getClass()));
-                } else {
-                    Toast.makeText(MainActivity.this, ((Content) mDataList.get(position)).getName(), Toast.LENGTH_SHORT).show();
-                }
+//                startActivity(new Intent(MainActivity.this, ((Content) mDataList.get(position)).getClass()));
+                Toast.makeText(MainActivity.this, ((Content) mDataList.get(position)).getName(), Toast.LENGTH_SHORT).show();
             }
         });
     }
